@@ -58,7 +58,7 @@ Add "Insurance Helper" as both the `Name` and the `Invocation Name`.
 ##### Configuration
 
 1. Select **HTTPS** as the Service Endpoint Type.
-2. Once you've started the app and [ngrok](https://ngrok.com/) you can add the url in the **Default** field. It will looks something like this `https://056d1d30.ngrok.io/alexa`.
+2. Once you've started the app you need to use [ngrok](https://ngrok.com/) to expose your local server to the internet. If your app is running you need to run `ngrok http 3000` to do this. You'll then get and url which you can add in the **Default** field. It will looks something like this `https://056d1d30.ngrok.io/alexa`.
 
 ##### SSL Configuration
 
