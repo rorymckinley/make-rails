@@ -42,7 +42,7 @@ end
 
 #### Additional information and Examples
 
-Check out [slack-ruby-bot](https://github.com/slack-ruby/slack-ruby-bot/). This main lib where everything is copied from ;)
+Check out [slack-ruby-bot](https://github.com/slack-ruby/slack-ruby-bot/). This is the main lib where everything is copied from ;)
 
 * [slack-bot-on-rails](https://github.com/dblock/slack-bot-on-rails): A bot running on Rails and using React to display Slack messages on a website.
 * [slack-mathbot](https://github.com/dblock/slack-mathbot): Slack integration with math.
@@ -53,6 +53,7 @@ Check out [slack-ruby-bot](https://github.com/slack-ruby/slack-ruby-bot/). This 
 * [slack-victorbot](https://github.com/uShip/victorbot): A Slack bot to talk to the Victorops service.
 
 ### Alexa Bot (Alexa Skill)
+An Alexa Skill is essentially an app that runs on an Amazon Echo.
 
 You can ask Alexa to:
 1. Get a list of all phone brands
@@ -68,6 +69,7 @@ You can ask Alexa to:
 Add "Insurance Helper" as both the `Name` and the `Invocation Name`.
 
 ##### Interaction Model
+The interaction model is by far the hardest part of creating an Alexa skill. I suggest reading [this](https://developer.amazon.com/docs/custom-skills/custom-interaction-model-reference.html) and watching this [video](https://www.youtube.com/watch?v=0V_rNKx-P1I) in order to get a basic understanding of what is required to create an interaction model.
 
 1. Add the JSON blob found in `interaction_model/intent_schema.json` in the Intent Schema field.
 2. Create a new *Custom Slot Type* and the values found in `interaction_model/custom_slots/LIST_OF_BRANDS`.
@@ -76,7 +78,7 @@ Add "Insurance Helper" as both the `Name` and the `Invocation Name`.
 ##### Configuration
 
 1. Select **HTTPS** as the Service Endpoint Type.
-2. Once you've started the app you need to use [ngrok](https://ngrok.com/) to expose your local server to the internet. If your app is running you need to run `ngrok http 3000` to do this. You'll then get and url which you can add in the **Default** field. It will looks something like this `https://056d1d30.ngrok.io/alexa`.
+2. Once you've started the app, you need to use [ngrok](https://ngrok.com/) to expose your local server to the internet. Once your app is running, you need to run `ngrok http 3000` to do this. You'll then get an url which you can add in the **Default** field. It will looks something like this `https://056d1d30.ngrok.io/alexa`.
 
 ##### SSL Configuration
 
@@ -84,7 +86,7 @@ Select the option `My development endpoint is a sub-domain of a domain that has 
 
 ##### Implementation
 
-The Alexa skill posts data to the `WebhooksController`. Here we then call the `AlexaService` which figures out the intent of the request and generates a response. This gets send back to the Alexa Skill and is verbalized by the Echo.
+The Alexa skill posts data to the `WebhooksController`. Here we then call the `AlexaService` which figures out the intent of [the request and generates a response](https://developer.amazon.com/docs/custom-skills/request-and-response-json-reference.html). This gets send back to the Alexa Skill and is verbalized by the Echo.
 
 ##### Additional information
 
