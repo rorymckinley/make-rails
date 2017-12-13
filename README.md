@@ -49,28 +49,29 @@ You can ask Alexa to:
 
 Add "Insurance Helper" as both the `Name` and the `Invocation Name`.
 
-#### Interaction Model
+##### Interaction Model
 
 1. Add the JSON blob found in `interaction_model/intent_schema.json` in the Intent Schema field.
 2. Create a new *Custom Slot Type* and the values found in `interaction_model/custom_slots/LIST_OF_BRANDS`.
 3. Add the *Sample Utterances* found in `interaction_model/sample_utterances.txt` in the Sample Utterances field.
 
-#### Configuration
+##### Configuration
 
 1. Select **HTTPS** as the Service Endpoint Type.
 2. Once you've started the app and [ngrok](https://ngrok.com/) you can add the url in the **Default** field. It will looks something like this `https://056d1d30.ngrok.io/alexa`.
 
-#### SSL Configuration
+##### SSL Configuration
 
 Select the option `My development endpoint is a sub-domain of a domain that has a wildcard certificate from a certificate authority`.
 
-#### Implementation
+##### Implementation
 
 The Alexa skill posts data to the `WebhooksController`. Here we then call the `AlexaService` which figures out the intent of the request and generates a response. This gets send back to the Alexa Skill and is verbalized by the Echo.
 
-#### Additional information
+##### Additional information
 
 * [Building Alexa Skills](https://developer.amazon.com/appsandservices/solutions/alexa/alexa-skills-kit/getting-started-guide)
+* [Alexa skill videos](https://www.youtube.com/watch?v=0V_rNKx-P1I)
 
 ## Running the app
 

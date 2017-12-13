@@ -1,15 +1,17 @@
 GIT
   remote: git@github.com:RootBank/root-insurance-ruby.git
-  revision: e069972be096c31d5230e46da0086e00f0dd2856
+  revision: 88107cbae587e1262340324f919558db22b229e7
+  tag: 0.0.3
   specs:
-    root-insurance (0.0.0)
+    root-insurance (0.0.3)
       httparty
 
 GIT
   remote: git@github.com:RootBank/root-ruby.git
-  revision: 5c02ab0d8568c89c3e924335468f1cbf5471a945
+  revision: ae1aecc2a9fe3377c15486073313e35d16a00c29
+  tag: 0.0.1
   specs:
-    root (0.0.0)
+    root (0.0.1)
       highline (~> 1.6)
       httparty
       tty-table
