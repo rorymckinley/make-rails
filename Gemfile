@@ -46,7 +46,7 @@ gem 'celluloid-io'
 gem 'rest-client'
 
 gem 'root', git: 'git@github.com:RootBank/root-ruby.git', tag: "0.0.1"
-gem 'root-insurance', git: 'git@github.com:RootBank/root-insurance-ruby.git', tag: "0.0.4"
+gem 'root-insurance', git: 'git@github.com:RootBank/root-insurance-ruby.git', tag: "0.1.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

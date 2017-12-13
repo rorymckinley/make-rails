@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:RootBank/root-insurance-ruby.git
-  revision: db6ae0018fa3d83885d40a1fef1505c13f96a041
-  tag: 0.0.4
+  revision: 5b15bf64d99a151b52489447c439e6ec60ce3af0
+  tag: 0.1.0
   specs:
-    root-insurance (0.0.4)
+    root-insurance (0.1.0)
       httparty
 
 GIT
