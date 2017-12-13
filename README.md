@@ -14,6 +14,8 @@ This is a basic slack bot with three commands:
 2. Get a list of all phones made by `brand`
 3. Get the value of a specific `phone`
 
+![](screenshots/slack_demo.gif)
+
 #### Settings up the Slack bot
 
 The first thing you have to do is to register a Slack bot and obtain the `SLACK_API_TOKEN`. You can create a new Bot Integration here [services/new/bot](http://slack.com/services/new/bot).
@@ -21,6 +23,22 @@ The first thing you have to do is to register a Slack bot and obtain the `SLACK_
 #### Implementation
 
 The bot lives in `lib/slack-insure-bot`.
+
+The part to pay attention to is how you structure the [commands](https://github.com/slack-ruby/slack-ruby-bot/blob/master/TUTORIAL.md#commands). For example creating a command to `list all phone brands` will be structure like this:
+
+```ruby
+module SlackInsureBot
+  module Commands
+    class Default < SlackRubyBot::Commands::Base
+      command 'list all phone brands' do |client, data, _match|
+        brands = ["Samsung", "Apple", "Nokia"]
+
+        client.say(channel: data.channel, text: brands.join("\n"))
+      end
+    end
+  end
+end
+```
 
 #### Additional information and Examples
 
