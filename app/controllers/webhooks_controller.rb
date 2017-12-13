@@ -4,17 +4,14 @@ class WebhooksController < ApplicationController
   def alexa
     request_type = params['request']['type']
 
-    case request_type
+    response = case request_type
     when "IntentRequest"
-      response = AlexaResponseService.new(params).intent_response
-
+      AlexaService.new(params).intent_response
     when "LaunchRequest"
-      response = AlexaResponseService.new(params).launch_request_response
-
+      AlexaService.new(params).launch_request_response
     else
       # Blank response for terminate session request
-      response = AlexaResponseService.new(params).contruct_response("")
-
+      AlexaService.new(params).contruct_response("")
     end
 
     render json: response

@@ -13,7 +13,7 @@ module SlackInsureBot
       end
 
       command 'list all the phones made by <brand>' do
-        desc 'Gets a list of all the phone made by <brand>.'
+        desc 'Gets a list of all phones made by <brand>.'
       end
 
       command 'what is the value of a <phone>' do

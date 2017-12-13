@@ -1,7 +1,7 @@
 require 'root'
 require 'root/insurance'
 
-class AlexaResponseService
+class AlexaService
 
   DEFAULT_CARD_IMAGE_SMALL = "https://s3-us-west-2.amazonaws.com/echo-demo-app-images/banana_small.png"
   DEFAULT_CARD_IMAGE_LARGE = "https://s3-us-west-2.amazonaws.com/echo-demo-app-images/banana_large.png"
