@@ -2,5 +2,5 @@ slack:
   api_token: <%= ENV["SLACK_API_TOKEN"] || '' %>
 
 root:
-  app_id: <%= ENV["ROOT_API_ID"] || '' %>
+  app_id: <%= ENV["ROOT_APP_ID"] || ENV["ROOT_API_ID"] || '' %>
   app_secret: <%= ENV["ROOT_APP_SECRET"] || '' %>
