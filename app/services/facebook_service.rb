@@ -1,6 +1,4 @@
 class FacebookService
-  TOKEN = "YOUR APP TOKEN"
-
   class << self
     def handle_message(sender_id, message)
       if message['text']
@@ -16,8 +14,13 @@ class FacebookService
 
       HTTParty.post("https://graph.facebook.com/v2.6/me/messages",
         body:    data.to_json,
-        query:   {access_token: TOKEN},
+        query:   {access_token: page_access_token},
         headers: {'Content-Type' => 'application/json', 'Accept' => 'application/json'})
+    end
+
+    private
+    def page_access_token
+      Settings.facebook.page_access_token
     end
   end
 end
