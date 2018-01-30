@@ -15,7 +15,7 @@ The facebook bot echos everything you say back to you.
 #### Setting up the Facebook Bot
 
 1. Read the facebook [getting started documentation](https://developers.facebook.com/docs/messenger-platform/getting-started/quick-start) and set up your app.
-2. Set the `FACEBOOK_PAGE_ACCESS_TOKEN` to your page access token.
+2. Set the `FACEBOOK_PAGE_ACCESS_TOKEN` environment variable to your page access token.
 3. Start your app.
 4. Once you've started the app, you need to use [ngrok](https://ngrok.com/) to expose your local server to the internet. The following command will expose your server, on port 3000, to the internet: `ngrok http 3000`.
 5. Ngrok will give you a url which you can use to set up your webhooks. See [here](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup).
