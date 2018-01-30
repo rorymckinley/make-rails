@@ -5,7 +5,7 @@ require_relative 'lib/slack-insure-bot/bot'
 
 Thread.abort_on_exception = true
 Thread.new do
-  SlackInsureBot::Bot.run
+  SlackInsureBot::Bot.run if ENV['SLACK_API_TOKEN'] 
 end
 
 run Rails.application
