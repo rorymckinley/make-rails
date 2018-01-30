@@ -28,7 +28,6 @@ class Facebook::WebhooksController < ApplicationController
     else
       render plain: nil, status: 404
     end
-
   end
 
   private
