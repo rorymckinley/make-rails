@@ -8,10 +8,11 @@ class FacebookService
         when /list all the phones made by (.*)/
           brand = $1
           phones = phones_by_brand(brand)
+
           if phones.count > 0
             phones.join("\n")
           else
-            "Therea are no phones made by #{brand}"
+            "There are no phones made by #{brand}"
           end
         when /what is the value of a (.*)/
           phone = $1
