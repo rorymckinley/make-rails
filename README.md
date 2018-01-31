@@ -1,11 +1,24 @@
 # Root Insurance Bots
 
-This is a Rails app that allows a user to engage with the [Root Insurance API](https://github.com/RootBank/root-insurance-ruby) via either a Slack bot or an Alexa skill. 
+This is a Rails app that allows a user to engage with the [Root Insurance API](https://github.com/RootBank/root-insurance-ruby) via either a Facebook messanger bot, Slack bot, or an Alexa skill.
 
 ## Bots
 
-1. Slack Bot
-2. Alexa Bot (Alexa skill)
+1. Facebook Bot
+2. Slack Bot
+3. Alexa Bot (Alexa skill)
+
+### Facebook Bot
+
+The facebook bot echos everything you say back to you.
+
+#### Setting up the Facebook Bot
+
+1. Read the facebook [getting started documentation](https://developers.facebook.com/docs/messenger-platform/getting-started/quick-start) and set up your app.
+2. Set the `FACEBOOK_PAGE_ACCESS_TOKEN` environment variable to your page access token.
+3. Start your app.
+4. Once you've started the app, you need to use [ngrok](https://ngrok.com/) to expose your local server to the internet. The following command will expose your server, on port 3000, to the internet: `ngrok http 3000`.
+5. Ngrok will give you a url which you can use to set up your webhooks. See [here](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup).
 
 ### Slack Bot
 
@@ -16,7 +29,7 @@ This is a basic slack bot with three commands:
 
 ![](screenshots/slack_demo.gif)
 
-#### Settings up the Slack bot
+#### Settings up the Slack Bot
 
 The first thing you have to do is to register a Slack bot and obtain the `SLACK_API_TOKEN`. You can create a new Bot Integration here [services/new/bot](http://slack.com/services/new/bot).
 
