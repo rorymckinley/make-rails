@@ -19,9 +19,11 @@ This is a basic facebook bot that integrates with Root's insurance APi. It has t
 
 1. Read the facebook [getting started documentation](https://developers.facebook.com/docs/messenger-platform/getting-started/quick-start) and set up your app.
 2. Set the `FACEBOOK_PAGE_ACCESS_TOKEN` environment variable to your page access token.
-3. Start your app.
-4. Once you've started the app, you need to use [ngrok](https://ngrok.com/) to expose your local server to the internet. The following command will expose your server, on port 3000, to the internet: `ngrok http 3000`.
-5. Ngrok will give you a url which you can use to set up your webhooks. See [here](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup).
+3. Create and set up your insurance app in the [Root developer console](https://app.root.co.za/developer/apps).
+4. Set the `ROOT_APP_ID` and `ROOT_APP_SECRET` environment variables to the correct values.
+5. Start your app.
+6. Once you've started the app, you need to use [ngrok](https://ngrok.com/) to expose your local server to the internet. The following command will expose your server, on port 3000, to the internet: `ngrok http 3000`.
+7. Ngrok will give you a url which you can use to set up your webhooks. See [here](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup).
 
 ### Slack Bot
 
