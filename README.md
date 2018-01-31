@@ -10,7 +10,7 @@ This is a Rails app that allows a user to engage with the [Root Insurance API](h
 
 ### Facebook Bot
 
-This is a basic facebook bot that integrates with Root's insurance APi. It has the following three commands:
+This is a basic facebook bot that integrates with Root's insurance API. It has the following three commands:
 1. Get a list of all phone brands
 2. Get a list of all phones made by `brand`
 3. Get the value of a specific `phone`
@@ -24,6 +24,11 @@ This is a basic facebook bot that integrates with Root's insurance APi. It has t
 5. Start your app.
 6. Once you've started the app, you need to use [ngrok](https://ngrok.com/) to expose your local server to the internet. The following command will expose your server, on port 3000, to the internet: `ngrok http 3000`.
 7. Ngrok will give you a url which you can use to set up your webhooks. See [here](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup).
+
+#### Implementation
+
+The facebook webhooks are implemented in `app/controllers/facebook/webhooks_controller.rb`. The controller delegates incoming messages to the `FacebookService` (`app/services/facebook_service.rb`).
+
 
 ### Slack Bot
 
