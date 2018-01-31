@@ -32,7 +32,7 @@ class Facebook::WebhooksController < ApplicationController
 
   private
   def verify_token
-    'a_really_long_and_random_token'
+    Settings.facebook.verify_token
   end
 
 end
