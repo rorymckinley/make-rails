@@ -10,7 +10,10 @@ This is a Rails app that allows a user to engage with the [Root Insurance API](h
 
 ### Facebook Bot
 
-The facebook bot echos everything you say back to you.
+This is a basic facebook bot that integrates with Root's insurance APi. It has the following three commands:
+1. Get a list of all phone brands
+2. Get a list of all phones made by `brand`
+3. Get the value of a specific `phone`
 
 #### Setting up the Facebook Bot
 
