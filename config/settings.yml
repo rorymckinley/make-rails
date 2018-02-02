@@ -2,7 +2,7 @@ slack:
   api_token: <%= ENV["SLACK_API_TOKEN"] || '' %>
 
 facebook:
-  page_access_token: EAAe2YWdmM9oBAM6w65S9G8JUbRDKKISuksL0UJcpxFsVLTLTZAFJgH8I1Ma5lAVZCMVrxFPQV9PSylLvS746GifUdBgWUGksqedoHWkfrL9qdBYoD4bsw7GQSfTPtnVOPzCqVe11qx7ZBcHkxyZBTcAE3WZCgcQIKcv82LU2eBnoM6OWCwr7ZB
+  page_access_token: <%= ENV["FACEBOOK_PAGE_ACCESS_TOKEN"] %>
   verify_token: a_really_long_and_random_token
 
 root:
