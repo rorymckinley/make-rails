@@ -7,11 +7,20 @@ class FacebookService
       elsif message['text']
         case message['text']
         when /Hello/
+          Interaction.create! sender_id: sender_id
           transmit(sender_id, 'Hello! How can I help you?')
         when /insure my phone/
           transmit(sender_id, 'Great! What make of phone is it?')
         when /(Apple|Samsung)/
+          interaction = Interaction.where(sender_id: sender_id).last
+          interaction.update_attributes! make: $1
           transmit(sender_id, "Great - what model of #{$1} is it?")
+        else
+          interaction = Interaction.where(sender_id: sender_id).last
+          if interaction and interaction.make
+            interaction.update_attributes! make: message['text']
+          end
+          transmit(sender_id, "Excellent - please wait while I generate a quote for a #{interaction.make} #{interaction.model}")
         end
         # echo_message(sender_id, message)
       end
