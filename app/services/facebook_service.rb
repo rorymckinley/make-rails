@@ -5,7 +5,15 @@ class FacebookService
         gadgets = fetch_root_gadgets($1)
         transmit(sender_id, gadgets.join("\n"))
       elsif message['text']
-        echo_message(sender_id, message)
+        case message['text']
+        when /Hello/
+          transmit(sender_id, 'Hello! How can I help you?')
+        when /insure my phone/
+          transmit(sender_id, 'Great! What make of phone is it?')
+        when /(Apple|Samsung)/
+          transmit(sender_id, "Great - what model of #{$1} is it?")
+        end
+        # echo_message(sender_id, message)
       end
     end
 
